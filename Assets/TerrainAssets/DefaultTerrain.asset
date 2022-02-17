@@ -23,8 +23,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.0015296936
-      value: 0.0059814453
+      time: 0.013381526
+      value: 0.021113396
       inSlope: 0.022121552
       outSlope: 0.022121552
       tangentMode: 0

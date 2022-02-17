@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - UpdatableDataEditor
     Assembly-CSharp.dll:
     - EndlessTerrain
     - HideOnStart
