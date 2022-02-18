@@ -62,7 +62,7 @@ Shader "Custom/Terrain"
                 float3 baseColor = baseColors[i]*baseColorStrengh[i];
                 float3 textureColor = triplanar(IN.worldPos,baseTextureScales[i],blendAxis,i)*(1-baseColorStrengh[i]);
                 
-                o.Albedo=o.Albedo * (1-drawStrength)+(baseColor+textureColor)*drawStrength;
+                o.Albedo=o.Albedo * (1-drawStrength)+(baseColor+textureColor)*drawStrength; 
             }
         }
         ENDCG

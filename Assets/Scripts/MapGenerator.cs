@@ -53,7 +53,7 @@ public class MapGenerator : MonoBehaviour
         MapDisplay display = FindObjectOfType<MapDisplay>();
         if (drawMode == DrawMode.NoiseMap) display.DrawTexture(TextureGenerator.TextureFromHeightMap(mapData.heightMap));
         if (drawMode == DrawMode.Mesh) display.DrawMesh(MeshGenerator.GenerateTerrainMesh(mapData.heightMap, terrainData.meshHeightMultiplier, terrainData.meshHeightCurve, editorPreviewLOD, terrainData.useFlatShading));
-        if (drawMode == DrawMode.Falloff) display.DrawTexture(TextureGenerator.TextureFromHeightMap(FalloffGenerator.GenerateFallottMap(mapChunkSize, terrainData.falloffA, terrainData.falloffB)));
+        if (drawMode == DrawMode.Falloff) display.DrawTexture(TextureGenerator.TextureFromHeightMap(FalloffGenerator.GenerateFalloffMap(mapChunkSize, terrainData.falloffA, terrainData.falloffB)));
     }
     public void RequestMapData(Vector2 center, Action<MapData> callback)
     {
@@ -118,7 +118,7 @@ public class MapGenerator : MonoBehaviour
             noiseData.normalizedMode);
         if (terrainData.useFalloff)
         {
-            if(falloffMap==null) falloffMap = FalloffGenerator.GenerateFallottMap(mapChunkSize+2, terrainData.falloffA, terrainData.falloffB);
+            if(falloffMap==null) falloffMap = FalloffGenerator.GenerateFalloffMap(mapChunkSize+2, terrainData.falloffA, terrainData.falloffB);
             for (int y = 0; y < mapChunkSize+2; y++)
             {
                 for (int x = 0; x < mapChunkSize+2; x++)
